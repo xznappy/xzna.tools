@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Roblox Cookie</title>
+    <script>
+        // Function to check if Roblox cookie is present
+        function checkRobloxCookie() {
+            // Attempt to access the Roblox cookies (not guaranteed to work due to security)
+            var cookies = document.cookie;
+            
+            // Look for a Roblox-related cookie, e.g., '_rbx' or 'rbx-auth'
+            if (cookies.includes('._rbx') || cookies.includes('rbx-auth')) {
+                alert('Roblox cookie found. You might be logged in.');
+            } else {
+                alert('Roblox cookie not found. Please log in first.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Check Roblox Cookie</h1>
+    <button onclick="checkRobloxCookie()">Check for Roblox Cookie</button>
+</body>
+</html>
