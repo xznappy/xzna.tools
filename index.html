@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xzna.tools - Under Development</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #1a1a2e;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            color: #e0e0ff;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #4da6ff;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .tab-menu {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab-menu button {
+            background: #1a1a2e;
+            color: #4da6ff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .tab-menu button:hover,
+        .tab-menu button.active {
+            background: #4da6ff;
+            color: #fff;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+        
+        .btn {
+            display: block;
+            width: 250px;
+            padding: 15px;
+            margin: 15px auto;
+            background: linear-gradient(135deg, #333, #1a1a2e);
+            color: #4da6ff;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 2px solid #4da6ff;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #4da6ff;
+            color: #fff;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #888;
+            margin-top: 30px;
+            font-style: italic;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+
+            const tabButtons = document.querySelectorAll('.tab-menu button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            document.querySelector(`button[data-tab="${tabId}"]`).classList.add('active');
+        }
+
+        
+        function comingSoon() {
+            alert('Coming Soon');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>xzna.tools - Under Development</h1>
+        <p class="subtitle">BEST ROBLOX EXTERNAL CHEAT | 4000+ VOUCHES</p>
+
+        <div class="tab-menu">
+            <button onclick="showTab('discord')" data-tab="discord">Discord</button>
+            <button onclick="showTab('ip')" data-tab="ip">IP</button>
+            <button onclick="showTab('generators')" data-tab="generators">Generators</button>
+        </div>
+
+        <div id="discord" class="tab-content">
+            <a href="webhook spam (discord).html" class="btn" target="_blank">Web Hook Spam</a>
+            <button class="btn" onclick="comingSoon()">Raid Tool (Coming Soon)</button>
+            <button class="btn" onclick="comingSoon()">Mass DM (Coming Soon)</button>
+        </div>
+
+        <div id="ip" class="tab-content">
+            <a href="ip lookup.html" class="btn">IP Lookup</a>
+            <a href="whats my ip.html" class="btn">My IP</a>
+        </div>
+
+        <div id="generators" class="tab-content">
+          
+            <a href="ip genrtaor.html" class="btn">ip genrators</a>
+            <a href="address genrator.html" class="btn">Address Generator</a>
+            <a href="name genrators.html" class="btn">Name Generator</a>
+            <a href="number genrator.html" class="btn">Number Generator</a>
+            <a href="black jack 21.html" class="btn">Phone Number Generator</a>
+        </div>
+
+        <div class="footer">BEST ROBLOX EXTERNAL Cheat Since 2017 | 4000+ Vouches</div>
+    </div>
+</body>
+</html>
